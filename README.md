@@ -1,3 +1,54 @@
+###About This App
+
+This is our RSS feed reader application. It uses the Google
+Feed Reader API to grab RSS feeds as JSON object we can make
+use of. It also uses the Handlebars templating library and
+jQuery.
+
+###How to run the application
+
+To Start this application click [here](http://neo0rabie.github.io/frontend-nanodegree-feedreader/).
+
+##Test Report
+Here are the tests written to test the different functionality of this app.
+We run 7 specs in total, And there are 0 failures.
+
+###RSS Feeds
+/* This is our first test - it tests to make sure that the
+* allFeeds variable has been defined and that it is not
+* empty.
+*/
+
+<blockquote>
+are defined
+url are defined
+names are defined
+</blockquote>
+
+###The menu
+Test that ensures the menu element is hidden by default.
+<blockquote>is hidden by default</blockquote>
+
+Test that ensures the menu changes visibility when the menu icon is clicked. This test have two expectations: does the menu display when clicked and does it hide when clicked again.
+<blockquote>
+display and hide when icon is clicked
+</blockquote>
+
+###Initial Entries
+Test that ensures when the loadFeed
+function is called and completes its work, there is at least
+a single .entry element within the .feed container.
+<blockquote>have loaded</blockquote>
+
+###New Feed Selection
+Test that ensures when a new feed is loaded
+by the loadFeed function that the content actually changes.
+<blockquote>should load different content</blockquote>
+
+
+#Disclaimer
+This app is part of Udacity front end nano degree, I only wrote the tests to the app I was given to test the differnet functionailty of the app and to showcase my skills in "test-driven development".
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
