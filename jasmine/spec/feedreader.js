@@ -27,10 +27,13 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+        // Saving the length of our allFeeds array
+        var len = allFeeds.length;
+
         it('url are defined', function(){
-            for (var property in allFeeds) {
-                expect(typeof allFeeds[property].url).toBe('string');
-                expect(allFeeds[property].url).not.toBe('');
+            for (var i = 0; i < len; i++) {
+                expect(typeof allFeeds[i].url).toBe('string');
+                expect(allFeeds[i].url).not.toBe('');
             }
         });
 
@@ -39,9 +42,9 @@ $(function() {
          * and that the name is not empty.
          */
         it('names are defined', function(){
-            for (var property in allFeeds) {
-                expect(typeof allFeeds[property].name).toBe('string');
-                expect(allFeeds[property].name).not.toBe('');
+            for (var i = 0; i < len; i++) {
+                expect(typeof allFeeds[i].name).toBe('string');
+                expect(allFeeds[i].name).not.toBe('');
             }
         });
     });
@@ -93,13 +96,16 @@ $(function() {
          */
         var prevContent,
             newContent;
-
+            function grapContent () {
+                prevContent = $('.feed a').children('.entry').text();
+            }
         // BeforeEach is loaded once before our test is run and done is used for async loadFeed()
         beforeEach(function(done){
-            // Grap the text inside .entery and assign it to a variable
-            prevContent = $('.feed a').children('.entry').text();
-            // Load a new feed.
-            loadFeed(1, done);
+            // we are going to load a new feed and use the callback to grab the text and load a new feed.
+            loadFeed(1, function(){
+                prevContent = $('.feed a').children('.entry').text();
+                loadFeed(2, done);
+            });
         });
 
         it('should load different content', function(done){
