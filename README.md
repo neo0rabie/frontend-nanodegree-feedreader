@@ -14,10 +14,9 @@ Here are the tests written to test the different functionality of this app.
 We run 7 specs in total, And there are 0 failures.
 
 ###RSS Feeds
-/* This is our first test - it tests to make sure that the
-* allFeeds variable has been defined and that it is not
-* empty.
-*/
+This is our first test - it tests to make sure that the
+allFeeds variable has been defined and that it is not empty.
+
 
 <blockquote>
 are defined
