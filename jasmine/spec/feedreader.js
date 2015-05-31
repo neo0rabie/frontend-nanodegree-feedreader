@@ -93,11 +93,10 @@ $(function() {
          */
         var prevContent,
             newContent;
-            // To be assigned to the content of new feed.
 
         // BeforeEach is loaded once before our test is run and done is used for async loadFeed()
         beforeEach(function(done){
-            // Grap the text of inside .entery and assign it to a variable
+            // Grap the text inside .entery and assign it to a variable
             prevContent = $('.feed a').children('.entry').text();
             // Load a new feed.
             loadFeed(1, done);

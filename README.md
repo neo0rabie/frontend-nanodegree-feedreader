@@ -10,7 +10,7 @@ jQuery.
 To Start this application click [here](http://neo0rabie.github.io/frontend-nanodegree-feedreader/).
 
 ##Test Report
-Here are the tests written to test the different functionality of this app.
+Here are the tests written to test the functionality of this app.
 We run 7 specs in total, And there are 0 failures.
 
 ###RSS Feeds
