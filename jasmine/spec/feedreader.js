@@ -96,9 +96,7 @@ $(function() {
          */
         var prevContent,
             newContent;
-            function grapContent () {
-                prevContent = $('.feed a').children('.entry').text();
-            }
+
         // BeforeEach is loaded once before our test is run and done is used for async loadFeed()
         beforeEach(function(done){
             // we are going to load a new feed and use the callback to grab the text and load a new feed.
